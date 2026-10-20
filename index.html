@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#102f35">
+  <meta name="description" content="Comparação das três edições da Prova Paulista. Gestão pedagógica da URE Mogi das Cruzes.">
+  <title>Observatório • Prova Paulista</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Pular para o conteúdo</a>
+<aside class="sidebar">
+  <a class="brand" href="./"><span class="brand-mark">pp<span>↗</span></span><span>Observatório<small>PROVA PAULISTA</small></span></a>
+  <div class="side-label">GESTÃO PEDAGÓGICA</div>
+  <nav aria-label="Navegação principal">
+    <button data-page="overview" class="active"><span>◫</span> Visão da rede</button>
+    <button data-page="schools"><span>▥</span> Comparar escolas</button>
+    <button data-page="subjects"><span>▦</span> Componentes</button>
+    <button data-page="plans"><span>☑</span> Metas e ações</button>
+    <button data-page="method"><span>ⓘ</span> Dados e critérios</button>
+  </nav>
+  <div class="side-bottom"><span class="status-dot"></span> Base integrada <strong>3 edições · 66 escolas</strong><hr><small>UNIDADE REGIONAL DE ENSINO</small><p>Mogi das Cruzes</p><small>Provas físicas · Código 10501</small></div>
+</aside>
+<div class="workspace">
+  <header class="topbar"><span>Inteligência educacional <span class="slash">/</span> <b id="breadcrumb">Visão da rede</b></span><div class="top-actions"><span class="edition">1º → 3º bimestre</span><button class="button" id="print">Imprimir / PDF</button></div></header>
+  <main id="main">
+    <div class="page-heading"><div><div class="eyebrow">PROVA PAULISTA · MOGI DAS CRUZES</div><h1 id="page-title">Cada escola. Uma trajetória.</h1><p id="page-subtitle">Da leitura dos resultados à definição das próximas ações.</p></div><button class="button primary" id="export">↓ Exportar comparação</button></div>
+    <section class="filters" aria-label="Filtros da análise">
+      <label class="search">Buscar escola<input id="search" type="search" placeholder="Nome ou código da escola…"></label>
+      <label>Indicador<select id="metric"><option value="score">Acertos gerais</option></select></label>
+      <label>Prioridade de apoio<select id="priority"><option value="">Todas as prioridades</option><option>Intensiva</option><option>Acompanhamento</option><option>Manutenção</option><option>Sem dado</option></select></label>
+      <button class="button subtle" id="reset">Limpar filtros</button>
+    </section>
+    <div id="filter-context" class="context"></div>
+    <div id="content" aria-live="polite"><p>Carregando os resultados das escolas…</p></div>
+    <footer>Observatório Prova Paulista <span>Comparações descritivas. Valide as decisões com a equipe pedagógica.</span></footer>
+  </main>
+</div>
+<dialog id="school-dialog" aria-labelledby="detail-title"><button id="close-dialog" class="close" aria-label="Fechar detalhes">×</button><div id="detail"></div></dialog>
+<div id="toast" role="status"></div>
+<script type="module" src="app.js"></script>
+</body></html>
